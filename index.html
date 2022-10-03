@@ -1,0 +1,403 @@
+<html lang = "en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-AU-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="Nhery_s_Porfolio.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+
+    <title>Nhery's Portfolio</title>
+ <link rel="icon" type="image/x-icon" href="Icons/nherylogopink.PNG">
+
+    <head>
+        <div class="menuCenter">
+            <nav class="navbar navbar-expand-lg ">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav me-auto ">
+                        
+                        <li class="liLogo">
+                            <a href="#"> <img class="logo" src="Icons/nherylogo.PNG" alt="Nhery's Logo"> </a>
+                        </li>  
+                        <span class="space">
+                        <ul class="navbar-nav nav me-auto">
+                            <li class="nav-item" >
+                                <a class="nav-link text-white font-weight-bold" aria-current="page" href="#">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white font-weight-bold" href="#aboutMe">ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link text-white font-weight-bold open-button" id="btnContact" onclick="openForm()" > CONTACTS </button>
+                            </li>
+                        </ul>
+                        </span> 
+                    </ul>
+                </div>
+            </div>
+          
+        </div>
+
+       
+          
+        
+            <!--Cursor -->
+            <div class="cursor" >
+                <script type="text/javascript" src="cursor.js"> </script>
+            </div>
+
+            <div class="containerPopUpFoms">
+             <!-- Pop Up Form - SENT -->
+             
+                <div class="popUp stackTop"  id="popUpSent" style="display:none">
+                    <p class="closePopUp" onclick="closePopUpSent()"> &#10006;</p>
+
+                    <section class="text-center">
+                        <i class="fa-sharp fa-solid fa-circle-check fa-5x "></i>
+                        <h6 class="mt-2">Awesome!</h6>
+                        <p class="msgPopUp">Thank you for sending your message. <br> I will get back to you. </p>
+                    </section>
+                    
+                </div>
+
+                <!-- Pop Up Form - Unable to Send -->
+                <div class="popUp stackTop"  id="popUpUnableSend" style="display:none" >
+                    <p class="closePopUp" onclick="closePopUpUnableSent()"> &#10006;</p>
+
+                    <section class="text-center">
+                        <i class="fa-sharp fa-solid fa-circle-xmark fa-5x "></i>
+                        <h6 class="mt-2">Opps!</h6>
+                        <p class="msgPopUp">There's an error. <br> Kindly sent your email at <a href="#">nhery@Usource.me</a> </p>
+                    </section>
+                    
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contactForm" style="display:none" id="myForm" >
+                    <div class="theForm">
+                        
+                        
+                            <p class="close" onclick="closeForm()"> &#10006;  </p>
+                            <section class="text-center">
+                                
+                                    
+                        
+                                <!-- Section heading -->
+                                <p class="font-weight-bold letsTalk">Let 's Talk!</p>
+                                <br>
+                            
+                                <div class="row">
+                            
+                                    <!-- Grid column -->
+                                    <div class="mb-md-0 mb-1">
+                                        <form id="form"> 
+                                            <div class="col-md-12">
+                                                <div class="md-form mb-0">
+                                                    
+                                                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+        
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-md-12 mt-2">
+                                                <div class="md-form mb-0">
+                                                    
+                                                    <input type="text" name="email" id="email" class="form-control" placeholder="Your Email" required>
+        
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-12 mt-2">
+                                                <div class="md-form">
+                                                    <div class="field">
+                                                        
+                                                        <textarea type="text" name="message" id="message" class="form-control " rows="4" placeholder="Your Message" required ></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="mt-3">
+                                                <input type="submit" id="button" value="Send Email" class="btnSubmit" >
+                                            </div>
+                                        
+                                        </form>
+                                    </div>
+                                </div>
+                            </section>  
+                        
+        
+                        <script type="text/javascript">
+                            emailjs.init('ufyWu6PMKW5F9QE5I')
+                        </script>
+        
+                        <!--Form and Email-->
+                        <script type="text/javascript" src="form.js"></script>
+                    
+                    </div>
+                </div>
+                
+                <!--Open and Close Form-->
+                <script type="text/javascript" src="closeAndOpenForm.js"></script>
+            </section>
+        </div>
+     
+    </head>
+
+
+    <body id = "body">
+ 
+        <div class="flexBanner">
+            <div class="imageNheryPicture">
+                <img src="Icons/Nhery_picture.png" alt="Picture of Women">
+            </div>
+
+            <div>
+                <div>
+                    <h1 class="animate-charcter">
+                        Nhery
+                    </h1>
+                </div>
+
+                
+                    <div class="waviy">
+                        <span style="--i:1">W</span>
+                        <span style="--i:2">e</span>
+                        <span style="--i:3">b</span>
+                        <span style="--i:4">s</span>
+                        <span style="--i:5">i</span>
+                        <span style="--i:6">t</span>
+                        <span style="--i:7">e</span> &nbsp;
+                        <span style="--i:8">D</span>
+                        <span style="--i:9">e</span>
+                        <span style="--i:10">v</span>
+                        <span style="--i:11">e</span>
+                        <span style="--i:12">l</span>
+                        <span style="--i:13">o</span>
+                        <span style="--i:14">p</span>
+                        <span style="--i:15">e</span>
+                        <span style="--i:16">r</span>
+                     
+                    </div>
+            
+            </div>
+        </div>
+
+        <div class="animate-charcter">
+
+            <div class="divider">
+                <hr class="solid">
+            </div>
+
+            <h5>
+                Skill Set
+            </h5>
+        </div>
+        
+        <div class="container">
+            
+            <div class="row">
+                <div class="column">    
+                    <h3 class="progress-title"> <img src="Icons/HTML.png" alt="HTML Logo"> HTML5</h3>
+                    <div class="progress"> 
+                        <div class="progress-bar" style="width:90%; background:#fe5e19;">
+                            <div class="progress-value">95%</div>
+                        </div>
+                    </div>
+                   
+                    <h3 class="progress-title"> <img src="Icons/css.png" alt="CSS3 Logo"> CSS3</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:90%; background:#01a7e1;">
+                                <div class="progress-value">95%</div>
+                            </div>
+                        </div>
+                        
+                    <h3 class="progress-title"> <img src="Icons/js.png" alt="Java Script Logo"> Java Script</h3>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:87%; background: #d59901;">
+                            <div class="progress-value">87%</div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="column">  
+                    <h3 class="progress-title"> <img src="Icons/Bootsrap.png" alt="Bootsrap Logo"> Bootstrap </h3>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:87%; background:#8311fa;">
+                            <div class="progress-value">87%</div>
+                        </div>
+                    </div>
+
+                    <h3 class="progress-title"> <img src="Icons/Shopify.png" alt="Shopify logo"> Shopify</h3>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:85%; background:#9fc74e;">
+                            <div class="progress-value">85%</div>
+                        </div>
+                    </div>
+
+                    <h3 class="progress-title"><img src="Icons/wordpress.png" alt="wordpress logo"> WordPress</h3>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:90%; background:#004460;">
+                            <div class="progress-value">90%</div>
+                        </div>
+                    </div>
+                </div> 
+
+            </div>
+
+        </div>
+        
+
+        <div class="animate-charcter">
+            <h5>
+                Websites I've Built
+            </h5>
+        </div>
+
+        <div class="gif"> 
+            <div class="row">
+                <div class="column">
+                    <div class="gifSpace">
+                        <h6> INKA WEBSITE</h6>
+                        <div class="gifDesign scroll--simple">
+                          
+                                <img class="" src="Icons/Inka.png" alt="Inka Sample Page"> 
+                         
+                        </div>
+                    </div>
+
+                    <div class="gifSpace scroll--simple">
+
+                        <h6> TOXICA CLOTHING </h6>
+                        <div class="gifDesign scroll--simple">
+                            <img src="Icons/toxiaClothing.PNG" alt="Toxica Sample Page">
+                        </div>
+                        
+                    </div>
+
+                    <div class="gifSpace">
+                        <h6 class=""> MY PORTFOLIO </h6>
+                        <div class="gifDesign scroll--simple">
+                            <img src="Icons/Portfolio.png" alt="My portfolio sample page"> 
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="column">    
+                    <div class="gifSpace">
+                        <h6> RESTO </h6>
+                        <div class="gifDesign scroll--simple">
+                            <img src="Icons/Resto.jpg" alt="Inka Sample Page"> 
+                        </div>
+                    </div>
+
+                    <div class="gifSpace">
+                        <h6 class=""> THE CAT CRIB </h6>
+                        <div class="gifDesign scroll--simple">
+                            <img src="Icons/TheCatCrib.png" alt="Inka Sample Page"> 
+                        </div>
+                    </div>
+
+                </div>
+
+                
+
+            </div>
+
+        </div>
+
+        <div class="aboutMe" id="aboutMe">
+            
+            <div class="animate-charcter">
+                <h5>
+                    About Me
+                </h5>
+            </div>
+
+        
+            <p class="resume"> I’m Nhery, a website developer from Usource. I have worked as a website developer for three years now. 
+                I am an expert in Shopify and WordPress and am confident in writing HTML, CSS, and Javascript if needed. 
+                I have a certification in Digital garage for the fundamental of digital marketing, which is required to build a marketing-friendly website. 
+                I have also worked as a graphic designer for two years which is very helpful in designing a website. 
+            </p>
+           
+            
+        </div>
+
+        <div class="certificates">
+            <h2>MY CERTIFICATES</h2>
+            <div class="con">
+                <section class="customer-logos slider">
+                   <div class="slide"><img src="Icons/Mariah Nhery - Digital Garage_page-0001.jpg" alt="Digital Garage Certificate"></div>
+                   <div class="slide"><img src="Icons/Digital Marketing.png" alt="Hubspot Digital Marketing Certificate"></div>
+                   <div class="slide"><img src="Icons/Mariah Nhery Ramos-CMS HubSpot.png" alt="CMS Hubspot Certificate"></div>
+                   <div class="slide"><img src="Icons/Mariah Nhery - Digital Garage_page-0001.jpg" alt="Digital Garage Certificate"></div>
+                   <div class="slide"><img src="Icons/Digital Marketing.png" alt="Hubspot Digital Marketing Certificate"></div>
+                   <div class="slide"><img src="Icons/Mariah Nhery Ramos-CMS HubSpot.png" alt="CMS Hubspot Certificate"></div>
+                   <div class="slide"><img src="Icons/SEO certification - Mariah Nhery B Ramos-min.png" alt="seo Hubspot Certificate"></div>
+                   <div class="slide"><img src="Icons/Marketing Software Certification - Mariah Nhery B Ramos-min.png" alt="Marketing Software Hubspot Certificate"></div>
+                </section>
+            </div>
+    
+             <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+             <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+                <script>
+                    $(document).ready(function(){
+                        $('.customer-logos').slick({
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            autoplay: true,
+                            autoplaySpeed: 2000,
+                            arrows: false,
+                            dots: false,
+                            pauseOnHover: false,
+                            responsive: [{
+                                breakpoint: 768,
+                                settings: {
+                                    slidesToShow: 2
+                                    
+                                }
+                            }, {
+                                breakpoint: 425,
+                                settings: {
+                                    slidesToShow: 1
+
+                                        
+                                }
+                            }]
+                        });
+                    });
+                 </script>
+        
+        </div>
+        
+        
+    </body>
+
+    
+
+    <footer class="foot">
+        
+       
+            <ul>
+                
+                <a href="https://www.linkedin.com/in/mariah-nhery-ramos-78030623b/" class="footLogo"> <img src="Icons/LinkedIn.png" alt="Github logo"> </a> 
+                <a href="https://github.com/Nheryrusource" class="footLogo"> <img src="Icons/Github.png" alt="Github logo"> </a>
+                <a href="#"  class="footLogo"> <img src="Icons/gmail.png" alt="Gmail logo"> </a>
+                <a href="#" class="footLogo"> <img src="Icons/Upwork.png" alt="Upwork logo"> </a>
+            
+            </ul>
+
+            
+    </footer>
+
+    <p class="text-center blockquote-footer mt-2">© Reserved 2022 Mariah Nhery B Ramos </p>
+   
+</html>
